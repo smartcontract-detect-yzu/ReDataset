@@ -1,0 +1,6 @@
+{
+    "name":"Tokens/PErc20.sol",
+	"auxiliary":"Control/Controller.sol",
+    "ver":"0.8.15",
+    "address":"https://github.com/DefiPie/defipie-protocol/commit/9670e9fdcab725be5175d648ec4d4279a2bd1330"
+}

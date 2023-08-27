@@ -1,0 +1,3 @@
+[INFO] | 2023-06-25 11:54:10 AM | analyzer.HypeBears | Analysis started at: 2023-06-25 11:54:10 AM
+[INFO] | 2023-06-25 11:54:11 AM | analyzer.HypeBears | Version constraints: ['0.8.4']
+[INFO] | 2023-06-25 11:54:11 AM | analyzer.HypeBears | solc version: v0.8.4

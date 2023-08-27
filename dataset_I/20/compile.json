@@ -1,0 +1,6 @@
+{
+	"name":"PEther.sol",
+	"auxiliary":"ComptrollerNFTPart2.sol",
+    "ver":"0.5.17",
+    "compile":"error"
+}
