@@ -1,0 +1,27 @@
+{
+    "detected": 3,
+    "time": 2.47582745552063,
+    "results": [
+        {
+            "entry point": "loanFallback",
+            "reentry point": "loanFallback"
+        },
+        {
+            "entry point": "loanFallback",
+            "reentry point": "loanFallback"
+        },
+        {
+            "entry point": "withdraw",
+            "reentry point": "withdraw"
+        }
+    ],
+    "statistic": {
+        "external_call": 467,
+        "hijackable_external_call": 6,
+        "low_level_call": 7,
+        "dir_exploitable_reentry_points": 4,
+        "indir_exploitable_reentry_points": 9,
+        "potential_pairs": 54,
+        "tainted_pairs": 2
+    }
+}
