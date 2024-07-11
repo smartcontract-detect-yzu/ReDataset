@@ -1,0 +1,12 @@
+digraph{
+0[label="ENTRY_POINT"];
+0->1;
+1[label="IF account == address(0)"];
+1->2;
+1->3;
+2[label="EXPRESSION revert ERC20InvalidReceiver(address)(address(0))"];
+2->3;
+3[label="END_IF"];
+3->4;
+4[label="EXPRESSION _update(address(0),account,value)"];
+}

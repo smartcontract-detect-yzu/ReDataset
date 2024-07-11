@@ -1,0 +1,23 @@
+digraph{
+0[label="ENTRY_POINT"];
+0->9;
+1[label="IF amount == 0"];
+1->2;
+1->3;
+2[label="EXPRESSION _openLiquidityTrigger(account)"];
+2->7;
+3[label="EXPRESSION _deposit(account,amount)"];
+3->4;
+4[label="IF ! getAddLiquidityTrigger(account) && tradingStartTime <= block.timestamp"];
+4->5;
+4->6;
+5[label="EXPRESSION _sell(account,amount)"];
+5->6;
+6[label="END_IF"];
+6->7;
+7[label="END_IF"];
+7->8;
+8[label="RETURN true"];
+9[label="EXPRESSION onlyMRPContract()"];
+9->1;
+}

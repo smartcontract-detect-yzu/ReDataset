@@ -1,0 +1,52 @@
+{
+    "detected": 9,
+    "time": 0.8699970245361328,
+    "results": [
+        {
+            "entry point": "receive",
+            "reentry point": "handle"
+        },
+        {
+            "entry point": "handle",
+            "reentry point": "receive"
+        },
+        {
+            "entry point": "transfer",
+            "reentry point": "handle"
+        },
+        {
+            "entry point": "transfer",
+            "reentry point": "transfer"
+        },
+        {
+            "entry point": "transfer",
+            "reentry point": "transfer"
+        },
+        {
+            "entry point": "transfer",
+            "reentry point": "transfer"
+        },
+        {
+            "entry point": "receive",
+            "reentry point": "receive"
+        },
+        {
+            "entry point": "transfer",
+            "reentry point": "receive"
+        },
+        {
+            "entry point": "handle",
+            "reentry point": "handle"
+        }
+    ],
+    "statistic": {
+        "external_call": 5,
+        "hijackable_external_call": 7,
+        "low_level_call": 1,
+        "dir_exploitable_reentry_points": 3,
+        "indir_exploitable_reentry_points": 2,
+        "potential_pairs": 15,
+        "tainted_pairs": 7,
+        "loc": 1173
+    }
+}

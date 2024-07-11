@@ -1,0 +1,12 @@
+digraph{
+0[label="ENTRY_POINT"];
+0->1;
+1[label="IF account.code.length == 0"];
+1->2;
+1->4;
+2[label="EXPRESSION _claimDividends(account)"];
+2->3;
+3[label="EXPRESSION _offAddLiquidityTrigger(account)"];
+3->4;
+4[label="END_IF"];
+}

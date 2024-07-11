@@ -1,0 +1,14 @@
+digraph{
+0[label="ENTRY_POINT"];
+0->5;
+1[label="IF LPTotalSupply == 0"];
+1->2;
+1->4;
+2[label="EXPRESSION MRPPrice = price"];
+2->3;
+3[label="EXPRESSION tradingStartTime = time"];
+3->4;
+4[label="END_IF"];
+5[label="EXPRESSION onlyLiquidityProvider()"];
+5->1;
+}

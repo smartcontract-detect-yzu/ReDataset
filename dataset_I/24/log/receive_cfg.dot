@@ -1,0 +1,14 @@
+digraph{
+0[label="ENTRY_POINT"];
+0->1;
+1[label="IF tradingStartTime >= block.timestamp || getAddLiquidityTrigger(_msgSender())"];
+1->2;
+1->3;
+2[label="EXPRESSION _addLiquidity()"];
+2->4;
+3[label="EXPRESSION _buy()"];
+3->4;
+4[label="END_IF"];
+4->5;
+5[label="EXPRESSION _offAddLiquidityTrigger(_msgSender())"];
+}

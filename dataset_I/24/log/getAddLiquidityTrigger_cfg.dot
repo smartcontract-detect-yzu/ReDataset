@@ -1,0 +1,13 @@
+digraph{
+0[label="ENTRY_POINT"];
+0->1;
+1[label="NEW VARIABLE isAddLiquidity = lpAccount[account].isAddLiquidity"];
+1->2;
+2[label="IF lpAccount[account].endTime > block.timestamp && isAddLiquidity"];
+2->3;
+2->4;
+3[label="RETURN true"];
+4[label="END_IF"];
+4->5;
+5[label="RETURN false"];
+}

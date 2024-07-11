@@ -1,0 +1,9 @@
+digraph{
+0[label="ENTRY_POINT"];
+0->1;
+1[label="EXPRESSION _burn(account,amount)"];
+1->2;
+2[label="EXPRESSION Withdrawal(account,amount)"];
+2->3;
+3[label="EXPRESSION IERC20(mrpContract).transfer(account,amount)"];
+}

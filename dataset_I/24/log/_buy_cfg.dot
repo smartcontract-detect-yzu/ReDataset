@@ -1,0 +1,29 @@
+digraph{
+0[label="ENTRY_POINT"];
+0->1;
+1[label="EXPRESSION require(bool,string)(LPTotalSupply > 0,No Liquidity)"];
+1->2;
+2[label="NEW VARIABLE ethAmount = msg.value"];
+2->3;
+3[label="EXPRESSION require(bool,string)(ethAmount >= (1000000000000000000 / 10),Minimum purchase amount is 0.1 ether)"];
+3->4;
+4[label="NEW VARIABLE buyFeeAmount = ethAmount * buyFee / 100"];
+4->5;
+5[label="NEW VARIABLE buyETHAmount = ethAmount - buyFeeAmount"];
+5->6;
+6[label="EXPRESSION ETHLPReward += buyFeeAmount"];
+6->7;
+7[label="NEW VARIABLE ethContractAmount = getContractEthAmount()"];
+7->8;
+8[label="NEW VARIABLE balanceOfThis = balanceOf(address(this))"];
+8->9;
+9[label="NEW VARIABLE buyAmount = buyETHAmount * balanceOfThis / ethContractAmount"];
+9->10;
+10[label="EXPRESSION Swap(_msgSender(),buyETHAmount,0,0,buyAmount)"];
+10->11;
+11[label="EXPRESSION _addDividends(buyFeeAmount)"];
+11->12;
+12[label="EXPRESSION _transfer(address(this),_msgSender(),buyAmount)"];
+12->13;
+13[label="EXPRESSION _withdraw(_msgSender(),buyAmount)"];
+}

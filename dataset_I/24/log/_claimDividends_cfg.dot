@@ -1,0 +1,20 @@
+digraph{
+0[label="ENTRY_POINT"];
+0->1;
+1[label="NEW VARIABLE accountETHDividends = dividendsAccountBalanceOfETH(account)"];
+1->2;
+2[label="IF accountETHDividends > 0"];
+2->3;
+2->8;
+3[label="EXPRESSION lpAccount[account].claimETH += accountETHDividends"];
+3->4;
+4[label="EXPRESSION lpAccount[account].dividends = newestDividends"];
+4->5;
+5[label="EXPRESSION ClaimDividends(account,accountETHDividends,newestDividends)"];
+5->6;
+6[label="EXPRESSION _safeEthTransfer(account,accountETHDividends)"];
+6->7;
+7[label="EXPRESSION ETHLPReward -= accountETHDividends"];
+7->8;
+8[label="END_IF"];
+}

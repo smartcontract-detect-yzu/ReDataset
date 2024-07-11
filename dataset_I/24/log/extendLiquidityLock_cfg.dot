@@ -1,0 +1,7 @@
+digraph{
+0[label="ENTRY_POINT"];
+0->1;
+1[label="EXPRESSION require(bool,string)(blockToUnlockLiquidity < _blockToUnlockLiquidity,You can't shorten duration)"];
+1->2;
+2[label="EXPRESSION blockToUnlockLiquidity = _blockToUnlockLiquidity"];
+}

@@ -1,0 +1,25 @@
+digraph{
+0[label="ENTRY_POINT"];
+0->1;
+1[label="EXPRESSION require(bool,string)(sellMRPAmount >= 1000000000000000000,Minimum purchase amount is 1 ether)"];
+1->2;
+2[label="EXPRESSION require(bool,string)(tradingStartTime <= block.timestamp,Trading Unopened)"];
+2->3;
+3[label="EXPRESSION _transfer(account,address(this),sellMRPAmount)"];
+3->4;
+4[label="NEW VARIABLE ethContractAmount = getContractEthAmount()"];
+4->5;
+5[label="NEW VARIABLE balanceOfThis = balanceOf(address(this))"];
+5->6;
+6[label="NEW VARIABLE ethAmount = sellMRPAmount * ethContractAmount / balanceOfThis"];
+6->7;
+7[label="EXPRESSION Swap(account,0,sellMRPAmount,ethAmount,0)"];
+7->8;
+8[label="NEW VARIABLE sellFeeAmount = ethAmount * sellFee / 100"];
+8->9;
+9[label="EXPRESSION ETHLPReward += sellFeeAmount"];
+9->10;
+10[label="EXPRESSION _addDividends(sellFeeAmount)"];
+10->11;
+11[label="EXPRESSION _safeEthTransfer(account,ethAmount - sellFeeAmount)"];
+}

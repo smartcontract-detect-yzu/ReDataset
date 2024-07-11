@@ -1,0 +1,14 @@
+digraph{
+0[label="ENTRY_POINT"];
+0->1;
+1[label="NEW VARIABLE success"];
+1->2;
+2[label="EXPRESSION (success,None) = to.call{value: ethAmount}()"];
+2->3;
+3[label="IF ! success"];
+3->4;
+3->5;
+4[label="EXPRESSION revert EthTransferFailed()()"];
+4->5;
+5[label="END_IF"];
+}
